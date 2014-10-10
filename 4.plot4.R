@@ -1,0 +1,11 @@
+load("input.RData")
+#Setting display screen to 2x2 and adding plots
+par(mfrow=c(2,2))
+with(dffinal,plot(FullTime,Global_active_power,xlab="",ylab="Global Active Power" ,type="l"))
+with(dffinal,plot(FullTime,Voltage,xlab="datetime",ylab="Voltage" ,type="l"))
+cola<-colnames(dffinal)
+with(dffinal,plot(FullTime,Sub_metering_1,type="l",col=1,ylab="Energy Sub Metering",xlab=""))
+lines(dffinal$FullTime,dffinal$Sub_metering_2,col=2)
+lines(dffinal$FullTime,dffinal$Sub_metering_3,col=4)
+legend(x="topright",legend=cola[7:9],lwd=1,col=c(1,2,3),cex=0.3)
+with(dffinal,plot(FullTime,Global_reactive_power,xlab="datetime",lwd=.0001,ylab="Global_reactive_Power" ,type="l"))
