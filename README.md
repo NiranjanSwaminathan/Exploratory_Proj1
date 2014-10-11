@@ -1,7 +1,7 @@
 Exploratory_Proj1
 =================
 Order of Execution
-  00 - generates function for cleaning ? values
+  00 - generates function for cleaning ? values. /n
   01 - reads data from the link , unzips and generates variables needed to be plotted, outputs RData file used subsequently
   1  - Plots #1
   2  - Plots #2
